@@ -19,13 +19,13 @@ int main(int argc, char* argv[]) {
   int count = 0;
   double average = 0;
 
-  for(const string &input : arguments) {
-    if(count != 0){
-    average += std::stod(input);
+  for (const string& input : arguments) {
+    if (count != 0) {
+      average += std::stod(input);
     }
     count++;
   }
-  double ave = (average/ (argc - 1));
+  double ave = (average / (argc - 1));
 
   std::cout << "average = " << ave;
 
