@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
   int count = 0;
   double average = 0;
 
-  for (string input : arguments) {
+  for(const string &input : arguments) {
     if(count != 0){
     average += std::stod(input);
     }
