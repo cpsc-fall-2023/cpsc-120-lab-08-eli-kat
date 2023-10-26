@@ -12,21 +12,22 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> arguments{argv, argv + argc};
 
   if (arguments.size() < 2) {
-    cout << "error: you must supply at least one number";
+    std::cout << "error: you must supply at least one number";
     return -1;
   }
-  double size = arguments.size();
 
-  double i = 1;
+  int count = 0;
   double average = 0;
 
-  for (i = 1; i < size; i++) {
-    average += (std::stod(arguments.at(i)));
+  for (string input : arguments) {
+    if(count != 0){
+    average += std::stod(input);
+    }
+    count++;
   }
+  double ave = (average/ (argc - 1));
 
-  double ave = (average / (i - 1));
-
-  cout << "average = " << ave;
+  std::cout << "average = " << ave;
 
   return 0;
 }
